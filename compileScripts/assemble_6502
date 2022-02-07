@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # kill any Vice64 session in progress
-killall x64 || true 
+killall x64sc || true 
 
 # extracting output file name
 ARGUMENT="$1"
@@ -53,4 +53,4 @@ echo "" >> $MONITOR_CMD_OUTPUT  # make sure the files ends with the newline so V
 
 # run in emulator
 echo "loading $PWD/../build/$OUTPUT"
-/Applications/Vice64/x64.app/Contents/MacOS/x64 -moncommands $MONITOR_CMD_OUTPUT "$BUILD_DIR/$OUTPUT" &
+/Applications/Vice64/bin/x64sc -moncommands $MONITOR_CMD_OUTPUT "$BUILD_DIR/$OUTPUT" &
