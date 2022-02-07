@@ -23,12 +23,12 @@ then
 fi
 
 
-/usr/local/bin/petcat -w2 -o "$BUILD_DIR/$OUTPUT" -- "$1"
+/Applications/Vice64/bin/petcat -w2 -o "$BUILD_DIR/$OUTPUT" -- "$1"
 
-killall x64 || true 
+killall x64sc || true 
 echo "crunching..."
 echo "original and a crunched version will be put into the directory."
 echo "the original version will be loaded into the emulator"
 /usr/local/bin/exobasic -N -r "$BUILD_DIR/$OUTPUT" 
 echo "loading $BUILD_DIR/$OUTPUT"
-/Applications/Vice64/x64.app/Contents/MacOS/x64 "$BUILD_DIR/$OUTPUT" &
+/Applications/Vice64/bin/x64sc  "$BUILD_DIR/$OUTPUT" &
