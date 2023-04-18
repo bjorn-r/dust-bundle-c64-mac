@@ -40,7 +40,7 @@ fi
 
 # crunch output prg file
 echo "crunching $OUTPUT"
-/usr/local/bin/pucrunch "$BUILD_DIR/$OUTPUT" "$BUILD_DIR/$OUTPUT" 
+/usr/local/bin/pucrunch -m6 "$BUILD_DIR/$OUTPUT" "$BUILD_DIR/$OUTPUT" 
 
 # generate a Vice64 monitor command file containing all the label defs plus the contents
 # of monitor_commands if it exists
