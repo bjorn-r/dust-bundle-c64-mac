@@ -53,4 +53,4 @@ echo "" >> $MONITOR_CMD_OUTPUT  # make sure the files ends with the newline so V
 
 # run in emulator
 echo "loading $PWD/../build/$OUTPUT"
-/Applications/Vice64/bin/x64sc -moncommands $MONITOR_CMD_OUTPUT "$BUILD_DIR/$OUTPUT" &
+/opt/homebrew/Cellar/vice/3.8/bin/x64sc -moncommands $MONITOR_CMD_OUTPUT "$BUILD_DIR/$OUTPUT" &
